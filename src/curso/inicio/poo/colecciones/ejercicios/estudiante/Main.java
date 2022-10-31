@@ -57,13 +57,16 @@ public class Main {
 		Asignatura asig4Alum2 = new Asignatura("biologia",3);
 		
 		Set <Asignatura> asignaturas2 = new HashSet<Asignatura>();
-		asignaturas1.add(asig1Alum2);
-		asignaturas1.add(asig2Alum2);
-		asignaturas1.add(asig3Alum2);
-		asignaturas1.add(asig4Alum2);
+		asignaturas2.add(asig1Alum2);
+		asignaturas2.add(asig2Alum2);
+		asignaturas2.add(asig3Alum2);
+		asignaturas2.add(asig4Alum2);
 		
 		Estudiante estudiante2 = new Estudiante("Estudiante 2"," A1 A2", "2222A", asignaturas2);
 		estudiante.add(estudiante2);
+		
+		Asignatura asignaturas21 = new Asignatura("biologia",3);
+
 		
 		//Alumno 3
 		Asignatura asig2Alum3 = new Asignatura("Fisica", 6);
@@ -71,9 +74,9 @@ public class Main {
 		Asignatura asig4Alum3 = new Asignatura("biologia",4);
 		
 		Set <Asignatura> asignaturas3 = new HashSet<Asignatura>();
-		asignaturas1.add(asig2Alum3);
-		asignaturas1.add(asig3Alum3);
-		asignaturas1.add(asig4Alum3);
+		asignaturas3.add(asig2Alum3);
+		asignaturas3.add(asig3Alum3);
+		asignaturas3.add(asig4Alum3);
 		
 		Estudiante estudiante3 = new Estudiante("Estudiante 3"," A1 A2", "3333A", asignaturas3);
 		estudiante.add(estudiante3);
@@ -85,10 +88,10 @@ public class Main {
 		Asignatura asig4Alum4 = new Asignatura("biologia",3);
 		
 		Set <Asignatura> asignaturas4 = new HashSet<Asignatura>();
-		asignaturas1.add(asig1Alum4);
-		asignaturas1.add(asig2Alum4);
-		asignaturas1.add(asig3Alum4);
-		asignaturas1.add(asig4Alum4);
+		asignaturas4.add(asig1Alum4);
+		asignaturas4.add(asig2Alum4);
+		asignaturas4.add(asig3Alum4);
+		asignaturas4.add(asig4Alum4);
 		
 		Estudiante estudiante4 = new Estudiante("Estudiante 4"," A1 A2", "4444A", asignaturas4);
 		estudiante.add(estudiante4);
@@ -101,9 +104,9 @@ public class Main {
 		
 		Set <Asignatura> asignaturas5 = new HashSet<Asignatura>();
 	
-		asignaturas1.add(asig2Alum5);
-		asignaturas1.add(asig3Alum5);
-		asignaturas1.add(asig4Alum5);
+		asignaturas5.add(asig2Alum5);
+		asignaturas5.add(asig3Alum5);
+		asignaturas5.add(asig4Alum5);
 		
 		Estudiante estudiante5 = new Estudiante("Estudiante 5"," A1 A2", "5555A", asignaturas5);
 		estudiante.add(estudiante5);
@@ -112,7 +115,7 @@ public class Main {
 	
 	private void mostrarDatos() {
 		for (Estudiante es : estudiante) {
-			System.out.println( estudiante);
+			System.out.println( es);
 			for(Asignatura asignatura : es.getAsignaturas()) {
 				System.out.println(asignatura);
 			}

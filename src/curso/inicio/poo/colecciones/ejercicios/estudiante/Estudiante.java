@@ -57,6 +57,12 @@ public class Estudiante {
 	public void setAsignaturas(Set<Asignatura> asignaturas) {
 		this.asignaturas = asignaturas;
 	}
+
+	@Override
+	public String toString() {
+		return "Estudiante [nombre=" + nombre + ", apellidos=" + apellidos + ", dni=" + dni + ", asignaturas="
+				+ asignaturas + "]";
+	}
 	
 	
 
