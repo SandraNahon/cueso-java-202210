@@ -3,72 +3,172 @@ package curso.inicio.poo.colecciones.ejercicios.estudiante;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Main {
+	
+	private List <Estudiante> estudiante ;
+	
+	public Main() {
+		super();
+		this.estudiante =  new ArrayList<Estudiante>();;
+	}
+
 
 	public static void main(String[] args) {
 		
-		ArrayList<Estudiante> estudiante = new ArrayList<Estudiante>();
-		
-		Estudiante estudiante1 = new Estudiante("Estudiante 1 "," A1 A2", "1111A", null);
-		Estudiante estudiante2 = new Estudiante("Estudiante 2"," A1 A2", "2222A", null);
-		Estudiante estudiante3 = new Estudiante("Estudiante 3"," A1 A2", "3333A", null);
-		Estudiante estudiante4 = new Estudiante("Estudiante 4"," A1 A2", "4444A", null);
-		Estudiante estudiante5 = new Estudiante("Estudiante 5"," A1 A2", "5555A", null);
-		
-		System.out.println(estudiante1.getNombre());
-		
-		for (Estudiante estu : estudiante) {
-			System.out.println(estu.getNombre());
-		}
-	
-		//Asignatura asig1 = new Asignatura(null, 0);
-		
-		
-		Asignatura asig1 = new Asignatura("Matematicas", 7);
-		Asignatura asig2 = new Asignatura("Fisica", 5);
-		Asignatura asig3 = new Asignatura("lengua", 4);
-		Asignatura asig4 = new Asignatura("biologia",3);
-		
-		//Asignatura[] a = {asig1,asig2, asig3, asig4};
-		
-		Set<Asignatura> asig = new HashSet<Asignatura>();
-		
-		System.out.println(asig.add(asig1));
-		System.out.println(asig.add(asig2));
-		System.out.println(asig.add(asig3));
-		System.out.println(asig.add(asig4));
-		
-	/*	for (Asignatura a : asig) {
-			for (Estudiante es : estudiante) {
-				System.out.println(es.getNombre());
-			}
-			System.out.println(a.getNombreAsignatura()+ " = " + a.getNota());
-		}*/
-		System.out.println();
-		System.out.println(estudiante1.getNombre()+" : \n" + asig1.getNombreAsignatura()+ " = " + asig1.getNota());
-		System.out.println();
-		System.out.println(estudiante2.getNombre()+" : \n" + asig2.getNombreAsignatura()+ " = " + asig2.getNota() +", " + asig1.getNombreAsignatura()+ " = " + asig1.getNota());
-		System.out.println();
-		
-		System.out.println("Alumnos que han cursado matematicas");
-		
-		
-		
-		/*
-		 Set<Boton> botones = new HashSet<Boton>();
-		Boton boton1 = new Boton("rojo","redondo");
-		Boton boton2 = new Boton("verde","cuadrado");
-		
-		System.out.println(botones.add((boton1)));
-		System.out.println(botones.add((boton2)));
-		System.out.println(botones.size());
-		 */
-		
-		
+		Main main = new Main();
+		main.crearEstudiantes();
+		main.mostrarDatos();
+		main.mostrarDatosMates();
+		main.mostrarDatosAprobados();
+		main.eliminarSuspendidos();
 
+		
+		
 	}
 
+
+	private void crearEstudiantes() {
+		//ArrayList<Estudiante> estudiantes = new ArrayList<Estudiante>();
+		
+		//Alumno 1
+		Asignatura asig1Alum1 = new Asignatura("Matematicas", 7);
+		Asignatura asig2Alum1 = new Asignatura("Fisica", 5);
+		Asignatura asig3Alum1 = new Asignatura("lengua", 4);
+		Asignatura asig4Alum1 = new Asignatura("biologia",3);
+		
+		//Asignatura[] asignaturas = {asig1,asig2,asig3,asig4};
+		
+		Set <Asignatura> asignaturas1 = new HashSet<Asignatura>();
+		asignaturas1.add(asig1Alum1);
+		asignaturas1.add(asig2Alum1);
+		asignaturas1.add(asig3Alum1);
+		asignaturas1.add(asig4Alum1);
+		
+		Estudiante estudiante1 = new Estudiante("Estudiante 1 "," A1 A2", "1111A", asignaturas1);
+		estudiante.add(estudiante1);
+		
+		//Alumno 2
+		Asignatura asig1Alum2 = new Asignatura("Matematicas", 5);
+		Asignatura asig2Alum2 = new Asignatura("Fisica", 8);
+		Asignatura asig3Alum2 = new Asignatura("lengua", 6);
+		Asignatura asig4Alum2 = new Asignatura("biologia",3);
+		
+		Set <Asignatura> asignaturas2 = new HashSet<Asignatura>();
+		asignaturas1.add(asig1Alum2);
+		asignaturas1.add(asig2Alum2);
+		asignaturas1.add(asig3Alum2);
+		asignaturas1.add(asig4Alum2);
+		
+		Estudiante estudiante2 = new Estudiante("Estudiante 2"," A1 A2", "2222A", asignaturas2);
+		estudiante.add(estudiante2);
+		
+		//Alumno 3
+		Asignatura asig2Alum3 = new Asignatura("Fisica", 6);
+		Asignatura asig3Alum3 = new Asignatura("lengua", 6);
+		Asignatura asig4Alum3 = new Asignatura("biologia",4);
+		
+		Set <Asignatura> asignaturas3 = new HashSet<Asignatura>();
+		asignaturas1.add(asig2Alum3);
+		asignaturas1.add(asig3Alum3);
+		asignaturas1.add(asig4Alum3);
+		
+		Estudiante estudiante3 = new Estudiante("Estudiante 3"," A1 A2", "3333A", asignaturas3);
+		estudiante.add(estudiante3);
+		
+		//Alumno 4
+		Asignatura asig1Alum4 = new Asignatura("Matematicas", 6);
+		Asignatura asig2Alum4 = new Asignatura("Fisica", 7);
+		Asignatura asig3Alum4 = new Asignatura("lengua", 6);
+		Asignatura asig4Alum4 = new Asignatura("biologia",3);
+		
+		Set <Asignatura> asignaturas4 = new HashSet<Asignatura>();
+		asignaturas1.add(asig1Alum4);
+		asignaturas1.add(asig2Alum4);
+		asignaturas1.add(asig3Alum4);
+		asignaturas1.add(asig4Alum4);
+		
+		Estudiante estudiante4 = new Estudiante("Estudiante 4"," A1 A2", "4444A", asignaturas4);
+		estudiante.add(estudiante4);
+		
+		//Alumno 5
+		
+		Asignatura asig2Alum5 = new Asignatura("Fisica", 8);
+		Asignatura asig3Alum5 = new Asignatura("lengua", 7);
+		Asignatura asig4Alum5 = new Asignatura("biologia",8);
+		
+		Set <Asignatura> asignaturas5 = new HashSet<Asignatura>();
+	
+		asignaturas1.add(asig2Alum5);
+		asignaturas1.add(asig3Alum5);
+		asignaturas1.add(asig4Alum5);
+		
+		Estudiante estudiante5 = new Estudiante("Estudiante 5"," A1 A2", "5555A", asignaturas5);
+		estudiante.add(estudiante5);
+
+	}
+	
+	private void mostrarDatos() {
+		for (Estudiante es : estudiante) {
+			System.out.println( estudiante);
+			for(Asignatura asignatura : es.getAsignaturas()) {
+				System.out.println(asignatura);
+			}
+		}
+		
+	}
+	
+	private void mostrarDatosMates() {
+		for (Estudiante es : estudiante) {
+			boolean hayMates = false;
+		for(Asignatura asignatura : es.getAsignaturas()) {
+				if(asignatura.getNombreAsignatura().equals("Matematicas")) {
+					hayMates = true;
+				}
+			}
+		
+		if(hayMates) {
+			System.out.println(es);
+		}
+		
+		}
+	}
+	
+	private void mostrarDatosAprobados() {
+		for (Estudiante es : estudiante) {
+			double totalsuma = 0;
+			int asign = 0;
+		for(Asignatura asignatura : es.getAsignaturas()) {
+			totalsuma += asignatura.getNota();
+				asign++;
+			}
+		
+		if(totalsuma/asign >= 5) {
+			System.out.println("Alumno aprobado");
+			System.out.println(es);
+		}
+		
+		}
+	}
+	
+	private void eliminarSuspendidos() {
+		//elimina los suspendisos en lengua
+		for (Estudiante es : estudiante) {
+		for(Asignatura asignatura : es.getAsignaturas()) {
+			if(asignatura.getNombreAsignatura().equals("Lengua") && asignatura.getNota() < 5) {
+				estudiante.remove(es);
+				
+			}
+		 }
+	  }
+   }
+	
+	
+
 }
+
+
+
 

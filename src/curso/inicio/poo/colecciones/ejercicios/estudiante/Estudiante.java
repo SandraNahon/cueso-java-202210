@@ -1,6 +1,5 @@
 package curso.inicio.poo.colecciones.ejercicios.estudiante;
 
-import java.util.HashSet;
 import java.util.Set;
 
 public class Estudiante {
@@ -8,16 +7,24 @@ public class Estudiante {
 	private String nombre;
 	private String apellidos;
 	private String dni;
-	private Asignatura asignaturas;
+	private Set<Asignatura> asignaturas;
 	
-	//Set<Asignatura> asig = new HashSet<Asignatura>();
-	public Estudiante(String nombre, String apellidos, String dni, Asignatura asignaturas) {
+	public Estudiante(String nombre, String apellidos, String dni, Set<Asignatura> asignaturas) {
 		super();
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.dni = dni;
 		this.asignaturas = asignaturas;
 	}
+
+	public Estudiante(String nombre, String apellidos, String dni) {
+		super();
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.dni = dni;
+	}
+
+
 
 	public String getNombre() {
 		return nombre;
@@ -43,14 +50,14 @@ public class Estudiante {
 		this.dni = dni;
 	}
 
-	public Asignatura getAsignaturas() {
+	public Set<Asignatura> getAsignaturas() {
 		return asignaturas;
 	}
 
-	public void setAsignaturas(Asignatura asignaturas) {
+	public void setAsignaturas(Set<Asignatura> asignaturas) {
 		this.asignaturas = asignaturas;
 	}
-
+	
 	
 
 }

@@ -78,16 +78,16 @@ public class Hospital {
 		//Recooro S.E
 		for(int i = 0; i < pacientes.length ; i++) {
 			if(pacientes[i] == null) {
-				consultas[0] = new Consulta(doctor[0], null); 
-				consultas[1] = new Consulta(doctor[1], null);
+			//	consultas[0] = new Consulta(doctor[0], null); 
+				//consultas[1] = new Consulta(doctor[1], null);
 			} else {
 				
 				//Recorro el array y asigno al paciente
 				for(int j = 0; j < consultas.length; j++) {
 					enfermeros[i].atenderPaciente(pacientes, consultas[j]);
 					System.out.println("El paciente " + consultas[j].getPaciente() + "le esta atendiendo el doctor " + consultas[j].getDoctor());
-					consultas[0] = new Consulta(doctor[0], pacientes[i]); 
-					consultas[1] = new Consulta(doctor[1], pacientes[i]);
+					//consultas[0] = new Consulta(doctor[0], pacientes[i]); 
+					//consultas[1] = new Consulta(doctor[1], pacientes[i]);
 					resultados = consultas[j].getDoctor().diagnosticar(consultas[j].getPaciente());
 
 					pacientes[i] = null;

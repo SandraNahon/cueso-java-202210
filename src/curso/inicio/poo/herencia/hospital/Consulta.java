@@ -1,13 +1,22 @@
 package curso.inicio.poo.herencia.hospital;
 
 public class Consulta {
+	private int numConsulta;
 	private Doctor doctor;
 	private Paciente paciente;
 	
-	public Consulta(Doctor doctor, Paciente paciente) {
+	public Consulta(int numConsulta, Doctor doctor) {
 		super();
+		this.numConsulta = numConsulta;
 		this.doctor = doctor;
-		this.paciente = paciente;
+	}
+
+	public int getNumConsulta() {
+		return numConsulta;
+	}
+
+	public void setNumConsulta(int numConsulta) {
+		this.numConsulta = numConsulta;
 	}
 
 	public Doctor getDoctor() {
@@ -25,7 +34,5 @@ public class Consulta {
 	public void setPaciente(Paciente paciente) {
 		this.paciente = paciente;
 	}
-	
-	
 
 }
