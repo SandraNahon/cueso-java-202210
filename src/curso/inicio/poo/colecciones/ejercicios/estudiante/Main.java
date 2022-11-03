@@ -149,7 +149,7 @@ public class Main {
 			}
 		
 		if(totalsuma/asign >= 5) {
-			System.out.println("Alumno aprobado");
+			System.out.println("Alumno aprobado con: "+ totalsuma);
 			System.out.println(es);
 		}
 		
